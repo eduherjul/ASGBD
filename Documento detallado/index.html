@@ -11,6 +11,8 @@
       
       
       
+        <link rel="prev" href="..">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Documento detalllado - Edu-mkdocs</title>
+        <title>Documento detallado - Edu-mkdocs</title>
       
     
     
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Documento detalllado
+              Documento detallado
             
           </span>
         </div>
@@ -210,9 +212,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Documento detallado.md" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -286,9 +290,27 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Documento detallado.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Documento detallado
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -297,6 +319,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-1-configuramos-en-aws-con-ubuntu-y-mysql-con-apt-install" class="md-nav__link">
+    PARTE 1: Configuramos en AWS con ubuntu y mysql (con apt install)
+  </a>
+  
+    <nav class="md-nav" aria-label="PARTE 1: Configuramos en AWS con ubuntu y mysql (con apt install)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuramos-el-acceso-desde-el-host-por-ssh-primero-al-equipo-ubuntu-y-a-mysql-desde-este" class="md-nav__link">
+    Configuramos el acceso desde el host por ssh primero al equipo ubuntu y a mysql desde éste:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuramos-contrasena-para-el-usuario-root" class="md-nav__link">
+    Configuramos contraseña para el usuario root:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accedemos-al-archivo-de-configuracion-para-permitir-conesiones-remotas-modificando-la-opcion" class="md-nav__link">
+    Accedemos al archivo de configuración para permitir conesiones remotas modificando la opción:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reiniciamos-mysql" class="md-nav__link">
+    Reiniciamos mysql:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajustamos-reglas-del-grupo-de-seguridad-en-aws-mysql-en-puerto-3306" class="md-nav__link">
+    Ajustamos reglas del Grupo de Seguridad en AWS (MySQL en puerto 3306):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-vamos-a-crear-una-instancia-en-aws-ec2" class="md-nav__link">
+    PARTE 2: Vamos a crear una instancia en AWS EC2
+  </a>
+  
+    <nav class="md-nav" aria-label="PARTE 2: Vamos a crear una instancia en AWS EC2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donde-podamos-ejecutar-mysql-server-en-un-contenedor-docker-y-acceder-desde-nuestro-host-local-a-traves-del-puerto-3307" class="md-nav__link">
+    Donde podamos ejecutar MySQL Server en un contenedor Docker y acceder desde nuestro host local a través del puerto 3307:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -408,7 +516,7 @@
                   
 
 
-  <h1>Documento detalllado</h1>
+  <h1>Documento detallado</h1>
 
 <h2 id="parte-1-configuramos-en-aws-con-ubuntu-y-mysql-con-apt-install">PARTE 1: Configuramos en AWS con ubuntu y mysql (con apt install)</h2>
 <h3 id="configuramos-el-acceso-desde-el-host-por-ssh-primero-al-equipo-ubuntu-y-a-mysql-desde-este">Configuramos el acceso desde el host por ssh primero al equipo ubuntu y a mysql desde éste:</h3>
@@ -440,8 +548,8 @@
 <p><strong>Que lo tenemos indicado en el resumen inicial de la instancia.</strong>
 <strong>Asignar los permisos en el host para el fichero de la clave .pem:</strong></p>
 <p><code>sudo chmod 400 /ruta del fichero.pem</code></p>
-<p><strong>Conectamos por ssh a la MV AWS:</strong>
-<code>ssh -i /ruta/a/tu-clave.pem ubuntu@&lt;DNS de IPv4 pública&gt; (resumen de la instancia)</code></p>
+<p><strong>Conectamos por ssh a la MV AWS:</strong></p>
+<p><code>ssh -i /ruta/a/tu-clave.pem ubuntu@&lt;DNS de IPv4 pública&gt; (resumen de la instancia)</code></p>
 <p><img alt="alt text" src="../image-6.png" /></p>
 <p><strong>Utilizamos el usuario que hemos creado para podernos conectar desde cualquier IP:</strong></p>
 <p><img alt="alt text" src="../image-7.png" /></p>
@@ -459,6 +567,7 @@
 <p><code>sudo reboot</code></p>
 <p><strong>Descargamos la imagen de mysql</strong></p>
 <p><code>docker versión</code></p>
+<p><code>sudo docker pull mysql:latest</code></p>
 <p><img alt="alt text" src="../image-10.png" /></p>
 <p><strong>Una vez tengamos descargada la imagen, iniciaremos el contenedor de MySQL y mapearemos el puerto 3307 de la instancia EC2 al puerto 3306 del contenedor:</strong></p>
 <p><code>sudo docker run -d --name nombre-del-contenedor -e MYSQL_ROOT_PASSWORD=contraseña -p 3307:3306 mysql</code></p>
