@@ -57,6 +57,7 @@
 `sudo chmod 400 /ruta del fichero.pem`
 
 **Conectamos por ssh a la MV AWS:**
+
 `ssh -i /ruta/a/tu-clave.pem ubuntu@<DNS de IPv4 pública> (resumen de la instancia)`
 
 ![alt text](image-6.png)
@@ -92,6 +93,8 @@
 **Descargamos la imagen de mysql**
 
 `docker versión`
+
+`sudo docker pull mysql:latest`
 
 ![alt text](image-10.png)
 
