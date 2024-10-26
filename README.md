@@ -1,2 +1,3 @@
 # ASGBD
-Repositorio para las práticas de la asignatura de BBDD
+
+Repositorio para las prácticas de la asignatura de BBDD
